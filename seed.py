@@ -1,12 +1,8 @@
-"""
-seed.py -- run once: `python seed.py`
+"""seed.py -- run once: `python seed.py`
 
-Loads the original static ENTRIES from tech_landscape_data.py into the
-new SQLite database as the starting 'curated' dataset. Safe to re-run;
-uses INSERT OR IGNORE so it won't overwrite anything you've since
-edited or approved through the app.
+Loads the static ENTRIES from tech_landscape_data.py into the SQLite
+database as the starting curated dataset. Safe to re-run.
 """
-
 from tech_landscape_data import ENTRIES
 import db
 
