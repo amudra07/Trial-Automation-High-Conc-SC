@@ -479,7 +479,7 @@ def render_home():
         if st.button("🔄 Refresh intelligence", key="refresh_btn", use_container_width=True):
             try:
                 claude_extract.get_api_key()  # fail fast, before burning 4 searches
-            except claude_extract.MissingAPIKeyError as exc:
+            except Exception as exc:
                 st.error(str(exc))
             else:
                 with st.spinner("Searching all 4 categories — this can take a minute or two..."):
